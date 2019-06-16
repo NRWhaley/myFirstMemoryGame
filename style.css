@@ -1,0 +1,12 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 1em 4em;
+    font-family: sans-serif;
+}
+
+.flashy-box {
+   width:100px;
+   height:100px;
+   background-color: cyan;
+}
