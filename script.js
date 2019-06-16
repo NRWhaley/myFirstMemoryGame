@@ -1,4 +1,4 @@
-console.log("testing")
+/*console.log("testing")
 let isCyan = false;
 const flashyBox = document.querySelector('.flashy-box')
 let flashInterval = window.setInterval(toggleColor, 1000);
@@ -7,9 +7,9 @@ flashyBox.addEventListener('click', flashToggle);
 function toggleColor(){
     flashyBox.style.backgroundColor = isCyan ? 'cyan' : 'yellow';
     isCyan = !isCyan;
-}
+}*/ 
 
-function flashToggle(){
+/*function flashToggle(){
     if (flashInterval) {
         clearInterval(flashInterval)
         flashInterval = false;
@@ -22,4 +22,4 @@ function flashToggle(){
     
     
 }
-
+    */
