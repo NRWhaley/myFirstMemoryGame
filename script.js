@@ -3,6 +3,9 @@
 
 let playerScore = 0
 let best = 0;
+let sequenceLength = 3;
+let turn = 0;
+let sequence = []
 
 
 
@@ -16,13 +19,23 @@ let repeatButton = document.getElementById('repeat');
 let resetButton = document.getElementById('reset');
 let totalScore = document.getElementById('score');
 let highScore = document.getElementById('high-score')
+let solution = document.getElementById('cheat')
+let feedback= document.getElementById('reaction')
 
 
 
 
 
 let startTheGame = function(){
-  
+    turn = 0;
+    solution.textContent = " "
+    sequence = []
+  for(let i = 0; i < sequenceLength; i++){
+      let boxNumber = (Math.floor(Math.random()*4)+1)
+      sequence.push(boxNumber)
+      solution.textContent += boxNumber
+
+  }
 }
 
 let repeatTheGame = function(){
@@ -37,28 +50,61 @@ let resetTheGame = function(){
     }
     playerScore = 0;
     totalScore.textContent= 0;
+    sequence = [];
+    solution.textContent = " "
+    turn = 0
 }
 
 
 let clickButtonOne = function() {
-    playerScore++
-    totalScore.textContent= playerScore;
+    if(sequence[turn] === 1){
+        feedback.textContent = "Nice!"
+        playerScore++
+        totalScore.textContent = playerScore;
+          
+    } else{
+        feedback.textContent = "Oops, try again!"
+    }
+    turn++
 }
 
 let clickButtonTwo = function() {
-    playerScore++
-    totalScore.textContent= playerScore;
+    if(sequence[turn] === 2){
+        feedback.textContent = "Nice!"
+        playerScore++
+        totalScore.textContent = playerScore;
+         
+    } else{
+        feedback.textContent = "Oops, try again!"
+    }
+    turn++
 }
 
 let clickButtonThree = function() {
-    playerScore++
-    totalScore.textContent= playerScore;
+    if(sequence[turn] === 3){
+        feedback.textContent = "Nice!"
+        playerScore++
+        totalScore.textContent = playerScore;
+          
+    } else{
+        feedback.textContent = "Oops, try again!"
+    }
+    turn++
 }
 
 let clickButtonFour = function() {
-    playerScore++
-    totalScore.textContent = playerScore;  
+    if(sequence[turn] === 4){
+        feedback.textContent = "Nice!"
+        playerScore++
+        totalScore.textContent = playerScore;
+         
+    } else{
+        feedback.textContent = "Oops, try again!"
+    }  
+    turn++
 }
+
+
 
 
 buttonOne.addEventListener('click', clickButtonOne)
@@ -66,5 +112,5 @@ buttonTwo.addEventListener('click', clickButtonTwo)
 buttonThree.addEventListener('click', clickButtonThree)
 buttonFour.addEventListener('click', clickButtonFour)
 resetButton.addEventListener('click', resetTheGame)
-
+playButton.addEventListener('click', startTheGame)
 
