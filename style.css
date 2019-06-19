@@ -3,7 +3,10 @@ body {
     color: white;
     margin: 1em 4em;
     font-family: sans-serif;
+
 }
+
+
 
 .boxOne {
    width:100px;
@@ -26,7 +29,7 @@ body {
    border-color: orange;
  }
  .boxTwo:hover {
-    border-color: darkorange;
+    border-color: darkgoldenrod;
 }
 
 

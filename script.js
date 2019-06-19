@@ -1,10 +1,8 @@
 
 
-let countOne = 0;
-let countTwo = 0
-let countThree = 0
-let countFour = 0
 
+let playerScore = 0
+let best = 0;
 
 
 
@@ -13,25 +11,53 @@ let buttonTwo = document.getElementById('boxTwo')
 let buttonThree = document.getElementById('boxThree')
 let buttonFour = document.getElementById('boxFour')
 
+let playButton = document.getElementById('play');
+let repeatButton = document.getElementById('repeat');
+let resetButton = document.getElementById('reset');
+let totalScore = document.getElementById('score');
+let highScore = document.getElementById('high-score')
+
+
+
+
+
+let startTheGame = function(){
+  
+}
+
+let repeatTheGame = function(){
+
+}
+
+let resetTheGame = function(){
+    if(playerScore > best){
+        highScore.textContent= playerScore;
+        best = playerScore;
+        
+    }
+    playerScore = 0;
+    totalScore.textContent= 0;
+}
+
 
 let clickButtonOne = function() {
-    buttonOne.textContent = countOne;
-    countOne++
+    playerScore++
+    totalScore.textContent= playerScore;
 }
 
 let clickButtonTwo = function() {
-    buttonTwo.textContent = countTwo;
-    countTwo++
+    playerScore++
+    totalScore.textContent= playerScore;
 }
 
 let clickButtonThree = function() {
-    buttonThree.textContent = countThree;
-    countThree++
+    playerScore++
+    totalScore.textContent= playerScore;
 }
 
 let clickButtonFour = function() {
-    buttonFour.textContent = countFour;
-    countFour++
+    playerScore++
+    totalScore.textContent = playerScore;  
 }
 
 
@@ -39,3 +65,6 @@ buttonOne.addEventListener('click', clickButtonOne)
 buttonTwo.addEventListener('click', clickButtonTwo)
 buttonThree.addEventListener('click', clickButtonThree)
 buttonFour.addEventListener('click', clickButtonFour)
+resetButton.addEventListener('click', resetTheGame)
+
+
