@@ -8,7 +8,13 @@ body {
 .boxOne {
    width:100px;
    height:100px;
-   background-color: cyan;
+   background-color: blue;
+   border-style: solid;
+   border-color: blue;
+}
+
+.boxOne:hover {
+    border-color: darkblue;
 }
 
 
@@ -16,18 +22,34 @@ body {
     width:100px;
     height:100px;
     background-color: orange;
+    border-style: solid;
+   border-color: orange;
  }
+ .boxTwo:hover {
+    border-color: darkorange;
+}
 
 
  .boxThree {
     width:100px;
     height:100px;
     background-color: red;
+    border-style: solid;
+   border-color: red;
  }
+ .boxThree:hover {
+    border-color: darkred;
+}
  
 
  .boxFour {
     width:100px;
     height:100px;
     background-color: green;
+    border-style: solid;
+   border-color: green;
  }
+
+ .boxFour:hover {
+    border-color: darkgreen
+}
