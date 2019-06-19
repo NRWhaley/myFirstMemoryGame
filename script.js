@@ -1,25 +1,41 @@
-/*console.log("testing")
-let isCyan = false;
-const flashyBox = document.querySelector('.flashy-box')
-let flashInterval = window.setInterval(toggleColor, 1000);
-flashyBox.addEventListener('click', flashToggle);
 
-function toggleColor(){
-    flashyBox.style.backgroundColor = isCyan ? 'cyan' : 'yellow';
-    isCyan = !isCyan;
-}*/ 
 
-/*function flashToggle(){
-    if (flashInterval) {
-        clearInterval(flashInterval)
-        flashInterval = false;
-        console.log("It stopped", flashInterval)
-    } else{
-        flashInterval = window.setInterval(toggleColor, 1000)
-         console.log('It\'s working again')
+let countOne = 0;
+let countTwo = 0
+let countThree = 0
+let countFour = 0
 
-    }
-    
-    
+
+
+
+let buttonOne = document.getElementById('boxOne')
+let buttonTwo = document.getElementById('boxTwo')
+let buttonThree = document.getElementById('boxThree')
+let buttonFour = document.getElementById('boxFour')
+
+
+let clickButtonOne = function() {
+    buttonOne.textContent = countOne;
+    countOne++
 }
-    */
+
+let clickButtonTwo = function() {
+    buttonTwo.textContent = countTwo;
+    countTwo++
+}
+
+let clickButtonThree = function() {
+    buttonThree.textContent = countThree;
+    countThree++
+}
+
+let clickButtonFour = function() {
+    buttonFour.textContent = countFour;
+    countFour++
+}
+
+
+buttonOne.addEventListener('click', clickButtonOne)
+buttonTwo.addEventListener('click', clickButtonTwo)
+buttonThree.addEventListener('click', clickButtonThree)
+buttonFour.addEventListener('click', clickButtonFour)

@@ -5,9 +5,29 @@ body {
     font-family: sans-serif;
 }
 
-.flashy-box {
+.boxOne {
    width:100px;
    height:100px;
    background-color: cyan;
 }
 
+
+.boxTwo {
+    width:100px;
+    height:100px;
+    background-color: orange;
+ }
+
+
+ .boxThree {
+    width:100px;
+    height:100px;
+    background-color: red;
+ }
+ 
+
+ .boxFour {
+    width:100px;
+    height:100px;
+    background-color: green;
+ }
