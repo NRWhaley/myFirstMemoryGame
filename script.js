@@ -38,6 +38,23 @@ let startTheGame = function(){
   }
 }
 
+
+let getCompliment = function(){
+    let num = (Math.floor(Math.random()*4)+1)
+    switch(num){
+        case 1:
+            return "Excellent!"
+        case 2:
+            return "Hot damn!"
+        case 3:
+            return "There you go!"
+        case 4:
+            return "Awesome!"
+    }
+}
+
+
+
 let repeatTheGame = function(){
 
 }
@@ -58,7 +75,7 @@ let resetTheGame = function(){
 
 let clickButtonOne = function() {
     if(sequence[turn] === 1){
-        feedback.textContent = "Nice!"
+        feedback.textContent = getCompliment();
         playerScore++
         totalScore.textContent = playerScore;
           
@@ -70,7 +87,7 @@ let clickButtonOne = function() {
 
 let clickButtonTwo = function() {
     if(sequence[turn] === 2){
-        feedback.textContent = "Nice!"
+        feedback.textContent = getCompliment()
         playerScore++
         totalScore.textContent = playerScore;
          
@@ -82,27 +99,32 @@ let clickButtonTwo = function() {
 
 let clickButtonThree = function() {
     if(sequence[turn] === 3){
-        feedback.textContent = "Nice!"
+        feedback.textContent = getCompliment()
         playerScore++
         totalScore.textContent = playerScore;
           
     } else{
         feedback.textContent = "Oops, try again!"
     }
+    
     turn++
 }
 
 let clickButtonFour = function() {
     if(sequence[turn] === 4){
-        feedback.textContent = "Nice!"
+        feedback.textContent = getCompliment()
         playerScore++
         totalScore.textContent = playerScore;
          
     } else{
         feedback.textContent = "Oops, try again!"
     }  
+
     turn++
 }
+
+
+
 
 
 
