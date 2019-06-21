@@ -33,7 +33,7 @@ let buttonOneFlash = function(){
  }
  
  let buttonTwoFlash = function(){
-    buttonTwo.style.backgroundColor = 'rgb(243, 188, 85)'
+    buttonTwo.style.backgroundColor = 'yellow'
  
      setTimeout(function () {
              buttonTwo.style.backgroundColor = 'orange'
@@ -41,7 +41,7 @@ let buttonOneFlash = function(){
  }
  
  let buttonThreeFlash = function(){
-    buttonThree.style.backgroundColor = 'orangered'
+    buttonThree.style.backgroundColor = 'pink'
  
      setTimeout(function () {
              buttonThree.style.backgroundColor = 'red'
@@ -56,17 +56,53 @@ let buttonOneFlash = function(){
      }, 500)
  }
 
+
+function generateSequence(sequenceLength){
+    for(let i = 0; i < sequenceLength; i++){
+        let boxNumber = (Math.floor(Math.random()*4)+1)
+        sequence.push(boxNumber)
+        
+    }
+
+    return sequence;
+}
+
+   function readSequence(val){
+        switch(val){
+            case 1:
+                buttonOneFlash();
+                break
+            case 2:
+                buttonTwoFlash();
+                break;
+            case 3:
+                buttonThreeFlash();
+                break;
+            case 4:
+                buttonFourFlash();
+                break;
+        }
+      
+   }
+
  //starting the Game
 let startTheGame = function(){
     turn = 0;
     solution.textContent = " "
-    sequence = []
-  for(let i = 0; i < sequenceLength; i++){
-      let boxNumber = (Math.floor(Math.random()*4)+1)
-      sequence.push(boxNumber)
-      solution.textContent += boxNumber
-  }
-  
+    
+  //generate sequence
+    sequence = generateSequence(sequenceLength)
+    solution.textContent += sequence;
+    
+    for(let i = 0; i < sequence.length; i++){
+        let val = sequence[i]
+       
+            setTimeout(readSequence(val), 500 * i)
+        
+        
+        
+     }
+     
      
 }
 
