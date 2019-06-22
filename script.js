@@ -68,11 +68,11 @@ function generateSequence(sequenceLength){
     return sequence;
 }
 
-   function readSequence(sequence){
-        for(let i = 0; i < sequence.length; i++){
+   function readSequence(record){
+        for(let i = 0; i < record.length; i++){
             (function(){
                 setTimeout(function(){
-                    switch(sequence[i]){
+                    switch(record[i]){
                        case 1:
                            buttonOneFlash();
                            break;
@@ -99,11 +99,9 @@ function generateSequence(sequenceLength){
    
 
  //starting the Game
-let startTheGame = function(){
+function startTheGame(){
     turn = 0;
-    
-    
-  //generate sequence
+    //generate sequence
     sequence = generateSequence(sequenceLength)
     record = sequence;
     readSequence(record)
@@ -131,6 +129,17 @@ function repeatTheGame(sequence){
    readSequence(record)
 }
 
+//level Up
+
+function levelUp(){
+   record = undefined
+   sequence = []
+   sequenceLength++
+   startTheGame();
+   console.log(record)
+
+}
+
 //reset button
 let resetTheGame = function(){
     if(playerScore > best){
@@ -144,6 +153,7 @@ let resetTheGame = function(){
     solution.textContent = " "
     turn = 0
     record = undefined;
+    sequenceLength = 3;
 }
 
 //effects of clicking button
@@ -153,12 +163,13 @@ let clickButtonOne = function() {
         feedback.textContent = "Great job! Level up!"
         playerScore++
         totalScore.textContent = playerScore
+        levelUp()
     }
     else if(sequence[turn] === 1){
         feedback.textContent = getCompliment();
         playerScore++
         totalScore.textContent = playerScore;
-          
+        turn++  
     } 
     
     else{
@@ -166,7 +177,7 @@ let clickButtonOne = function() {
         resetTheGame();
     }
    
-    turn++
+    
 }
 
 let clickButtonTwo = function() {
@@ -175,17 +186,18 @@ let clickButtonTwo = function() {
         feedback.textContent = "Great job! Level up!"
         playerScore++
         totalScore.textContent = playerScore
+        levelUp()
     }
     else if(sequence[turn] === 2){
         feedback.textContent = getCompliment()
         playerScore++
         totalScore.textContent = playerScore;
-         
+        turn++
     } else{
         feedback.textContent = "Oops, try again!"
         resetTheGame();
     }
-    turn++
+    
 }
 
 let clickButtonThree = function() {
@@ -194,18 +206,19 @@ let clickButtonThree = function() {
         feedback.textContent = "Great job! Level up!"
         playerScore++
         totalScore.textContent = playerScore
+        levelUp()
     }
     else if(sequence[turn] === 3){
         feedback.textContent = getCompliment()
         playerScore++
         totalScore.textContent = playerScore;
-          
+        turn++  
     } else{
         feedback.textContent = "Oops, try again!"
         resetTheGame();
     }
     
-    turn++
+    
 }
 
 let clickButtonFour = function() {
@@ -214,17 +227,18 @@ let clickButtonFour = function() {
         feedback.textContent = "Great job! Level up!"
         playerScore++
         totalScore.textContent = playerScore
+        levelUp()
     } else if(sequence[turn] === 4){
         feedback.textContent = getCompliment()
         playerScore++
         totalScore.textContent = playerScore;
-         
+        turn++
     } else{
         feedback.textContent = "Oops, try again!"
         resetTheGame();
     }  
 
-    turn++
+    
 }
 
 
