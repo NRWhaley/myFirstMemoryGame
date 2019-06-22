@@ -100,22 +100,12 @@ function generateSequence(sequenceLength){
  //starting the Game
 let startTheGame = function(){
     turn = 0;
-    solution.textContent = " "
+    
     
   //generate sequence
     sequence = generateSequence(sequenceLength)
-    solution.textContent += sequence;
-    
-    for(let i = 0; i < sequence.length; i++){
-        let val = sequence[i]
-       
-            readSequence(sequence)
-        
-        
-        
-     }
-     
-     
+    readSequence(sequence)
+           
 }
 
 //feedback to player
@@ -136,8 +126,9 @@ let getCompliment = function(){
 
 //replay button
 function repeatTheGame(sequence){
-   
+   readSequence(sequence)
 }
+
 //reset button
 let resetTheGame = function(){
     if(playerScore > best){
@@ -245,5 +236,5 @@ buttonThree.addEventListener('click', clickButtonThree)
 buttonFour.addEventListener('click', clickButtonFour)
 resetButton.addEventListener('click', resetTheGame)
 playButton.addEventListener('click', startTheGame)
-
+repeatButton.addEventListener('click', repeatTheGame)
 
