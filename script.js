@@ -67,23 +67,35 @@ function generateSequence(sequenceLength){
     return sequence;
 }
 
-   function readSequence(val){
-        switch(val){
-            case 1:
-                buttonOneFlash();
-                break
-            case 2:
-                buttonTwoFlash();
-                break;
-            case 3:
-                buttonThreeFlash();
-                break;
-            case 4:
-                buttonFourFlash();
-                break;
+   function readSequence(sequence){
+        for(let i = 0; i < sequence.length; i++){
+            (function(){
+                setTimeout(function(){
+                    switch(sequence[i]){
+                       case 1:
+                           buttonOneFlash();
+                           break;
+                        case 2:
+                            buttonTwoFlash();
+                            break;
+                        case 3:
+                            buttonThreeFlash();
+                            break;
+                        case 4:
+                            buttonFourFlash();
+                            break;
+                    }
+                 
+
+
+
+                    },(1000 * i));
+                }(i));
+            }
+
         }
       
-   }
+   
 
  //starting the Game
 let startTheGame = function(){
@@ -97,7 +109,7 @@ let startTheGame = function(){
     for(let i = 0; i < sequence.length; i++){
         let val = sequence[i]
        
-            setTimeout(readSequence(val), 500 * i)
+            readSequence(sequence)
         
         
         
@@ -124,7 +136,7 @@ let getCompliment = function(){
 
 //replay button
 function repeatTheGame(sequence){
-     
+   
 }
 //reset button
 let resetTheGame = function(){
@@ -143,7 +155,7 @@ let resetTheGame = function(){
 //effects of clicking button
 let clickButtonOne = function() {
     buttonOneFlash();
-    if(sequence[turn] === 1){
+    else if(sequence[turn] === 1){
         feedback.textContent = getCompliment();
         playerScore++
         totalScore.textContent = playerScore;
@@ -152,6 +164,7 @@ let clickButtonOne = function() {
     
     else{
         feedback.textContent = "Oops, try again!"
+        resetTheGame();
     }
    
     turn++
@@ -166,6 +179,7 @@ let clickButtonTwo = function() {
          
     } else{
         feedback.textContent = "Oops, try again!"
+        resetTheGame();
     }
     turn++
 }
@@ -179,6 +193,7 @@ let clickButtonThree = function() {
           
     } else{
         feedback.textContent = "Oops, try again!"
+        resetTheGame();
     }
     
     turn++
@@ -193,6 +208,7 @@ let clickButtonFour = function() {
          
     } else{
         feedback.textContent = "Oops, try again!"
+        resetTheGame();
     }  
 
     turn++
