@@ -6,6 +6,7 @@ let best = 0;
 let sequenceLength = 3;
 let sequence = []
 let turn = 0;
+let record = undefined;
 
 
 
@@ -104,7 +105,8 @@ let startTheGame = function(){
     
   //generate sequence
     sequence = generateSequence(sequenceLength)
-    readSequence(sequence)
+    record = sequence;
+    readSequence(record)
            
 }
 
@@ -126,7 +128,7 @@ let getCompliment = function(){
 
 //replay button
 function repeatTheGame(sequence){
-   readSequence(sequence)
+   readSequence(record)
 }
 
 //reset button
@@ -141,6 +143,7 @@ let resetTheGame = function(){
     sequence = [];
     solution.textContent = " "
     turn = 0
+    record = undefined;
 }
 
 //effects of clicking button
