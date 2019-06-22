@@ -155,6 +155,11 @@ let resetTheGame = function(){
 //effects of clicking button
 let clickButtonOne = function() {
     buttonOneFlash();
+    if(turn === (sequence.length - 1) && sequence[turn] === 1){
+        feedback.textContent = "Great job! Level up!"
+        playerScore++
+        totalScore.textContent = playerScore
+    }
     else if(sequence[turn] === 1){
         feedback.textContent = getCompliment();
         playerScore++
@@ -172,7 +177,12 @@ let clickButtonOne = function() {
 
 let clickButtonTwo = function() {
     buttonTwoFlash()
-    if(sequence[turn] === 2){
+    if(turn === (sequence.length - 1) && sequence[turn] === 2){
+        feedback.textContent = "Great job! Level up!"
+        playerScore++
+        totalScore.textContent = playerScore
+    }
+    else if(sequence[turn] === 2){
         feedback.textContent = getCompliment()
         playerScore++
         totalScore.textContent = playerScore;
@@ -186,7 +196,12 @@ let clickButtonTwo = function() {
 
 let clickButtonThree = function() {
     buttonThreeFlash()
-    if(sequence[turn] === 3){
+    if(turn === (sequence.length - 1) && sequence[turn] === 3){
+        feedback.textContent = "Great job! Level up!"
+        playerScore++
+        totalScore.textContent = playerScore
+    }
+    else if(sequence[turn] === 3){
         feedback.textContent = getCompliment()
         playerScore++
         totalScore.textContent = playerScore;
@@ -201,7 +216,11 @@ let clickButtonThree = function() {
 
 let clickButtonFour = function() {
     buttonFourFlash();
-    if(sequence[turn] === 4){
+    if(turn === (sequence.length - 1) && sequence[turn] === 4){
+        feedback.textContent = "Great job! Level up!"
+        playerScore++
+        totalScore.textContent = playerScore
+    } else if(sequence[turn] === 4){
         feedback.textContent = getCompliment()
         playerScore++
         totalScore.textContent = playerScore;
