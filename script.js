@@ -86,7 +86,7 @@ function generateSequence(sequenceLength){
                             buttonFourFlash();
                             break;
                     }
-                 
+
 
 
 
@@ -101,6 +101,7 @@ function generateSequence(sequenceLength){
  //starting the Game
 function startTheGame(){
     turn = 0;
+    playButton.style.visibility = "hidden"
     //generate sequence
     sequence = generateSequence(sequenceLength)
     record = sequence;
@@ -147,6 +148,7 @@ let resetTheGame = function(){
         best = playerScore;
         
     }
+    playButton.style.visibility = "visible";
     playerScore = 0;
     totalScore.textContent= 0;
     sequence = [];
