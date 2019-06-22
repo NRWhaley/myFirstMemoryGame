@@ -136,7 +136,7 @@ function levelUp(){
    sequence = []
    sequenceLength++
    setTimeout(function(){startTheGame();}, 3000);
-   console.log(record)
+   
 
 }
 
