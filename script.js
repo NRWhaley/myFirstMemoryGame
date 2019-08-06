@@ -116,7 +116,7 @@ let getCompliment = function(){
         case 1:
             return "Excellent!"
         case 2:
-            return "Hot damn!"
+            return "Great job!"
         case 3:
             return "There you go!"
         case 4:
