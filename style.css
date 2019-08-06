@@ -7,6 +7,11 @@ body {
 
 }
 
+article {
+  align-items: center;
+}
+
+
 #reaction {
   
   text-align: center;
