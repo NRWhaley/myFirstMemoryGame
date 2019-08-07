@@ -41,12 +41,12 @@ article {
 .boxTwo {
     width:100px;
     height:100px;
-    background-color: yellow;
+    background-color: orange;
     border-style: solid;
-   border-color: yellow;
+   border-color: orange;
  }
  .boxTwo:hover {
-    border-color: orange;
+    border-color: goldenrod;
 }
 
 

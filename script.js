@@ -87,13 +87,13 @@ function generateSequence(sequenceLength){
                             break;
                     }
 
+                        
 
-
-
+                   
                     },(1000 * i));
                 }(i));
             }
-
+          
         }
       
    
