@@ -7,9 +7,7 @@ body {
 
 }
 
-article {
-  align-items: center;
-}
+
 
 
 #reaction {
@@ -26,6 +24,7 @@ article {
 
 
 .boxOne {
+  border-radius: 5px;
    width:100px;
    height:100px;
    background-color: blue;
@@ -34,11 +33,12 @@ article {
 }
 
 .boxOne:hover {
-    border-color: darkblue;
+    border-color: white;
 }
 
 
 .boxTwo {
+  border-radius: 5px;
     width:100px;
     height:100px;
     background-color: orange;
@@ -46,11 +46,12 @@ article {
    border-color: orange;
  }
  .boxTwo:hover {
-    border-color: goldenrod;
+    border-color: white;
 }
 
 
  .boxThree {
+   border-radius: 5px;
     width:100px;
     height:100px;
     background-color: red;
@@ -58,11 +59,12 @@ article {
    border-color: red;
  }
  .boxThree:hover {
-    border-color: darkred;
+    border-color: white;
 }
  
 
  .boxFour {
+   border-radius: 5px;
     width:100px;
     height:100px;
     background-color: green;
@@ -71,7 +73,7 @@ article {
  }
 
  .boxFour:hover {
-    border-color: darkgreen
+    border-color: white
 }
 
 
@@ -80,4 +82,12 @@ article {
     visibility: visible;
    
    
+}
+
+.btn{
+   border-radius: 5px; 
+}
+
+.btn:hover{
+  border-color: grey
 }

@@ -27,34 +27,42 @@ let feedback= document.getElementById('reaction')
 //Making the buttons flash
 let buttonOneFlash = function(){
     buttonOne.style.backgroundColor = 'lightblue'
+    buttonOne.style.borderColor = 'lightblue'
  
      setTimeout(function () {
              buttonOne.style.backgroundColor = 'blue'
-     }, 500)
+             buttonOne.style.borderColor = 'blue'
+     }, 750)
  }
  
  let buttonTwoFlash = function(){
     buttonTwo.style.backgroundColor = 'yellow'
+    buttonTwo.style.borderColor = 'yellow'
  
      setTimeout(function () {
              buttonTwo.style.backgroundColor = 'orange'
-     }, 500)
+             buttonTwo.style.borderColor = 'orange'
+     }, 750)
  }
  
  let buttonThreeFlash = function(){
     buttonThree.style.backgroundColor = 'pink'
+    buttonThree.style.borderColor = 'pink'
  
      setTimeout(function () {
              buttonThree.style.backgroundColor = 'red'
-     }, 500)
+             buttonThree.style.borderColor = 'red'
+     }, 750)
  }
  
  let buttonFourFlash = function(){
     buttonFour.style.backgroundColor = 'lightgreen'
+    buttonFour.style.borderColor = 'lightgreen'
  
      setTimeout(function () {
              buttonFour.style.backgroundColor = 'green'
-     }, 500)
+             buttonFour.style.borderColor = 'green'
+     }, 750)
  }
 
 
@@ -91,7 +99,7 @@ function generateSequence(sequenceLength){
 
                    
                     },(1000 * i));
-                }(i));
+                 }(i));
             }
           
         }
